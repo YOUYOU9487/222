@@ -2,31 +2,39 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>陳宥廷的計算機</title>
+<title>t/陳宥廷的計算機</title>
 
 <style>
 
 body{
+    background:#f5e6c8;
     display:flex;
     justify-content:center;
     align-items:center;
     height:100vh;
-    background:#f2f2f2;
-    font-family:Arial;
+    font-family:"KaiTi","DFKai-SB",serif;
 }
 
 .calculator{
-    background:#333;
+    background:#8b5a2b;
     padding:20px;
     border-radius:10px;
+    box-shadow:5px 5px 15px rgba(0,0,0,0.5);
+}
+
+h1{
+    text-align:center;
+    color:#fff8dc;
 }
 
 #display{
     width:220px;
     height:50px;
-    margin-bottom:10px;
     font-size:24px;
     text-align:right;
+    margin-bottom:10px;
+    background:#fff8dc;
+    border:2px solid #5c4033;
 }
 
 .buttons{
@@ -40,24 +48,28 @@ button{
     font-size:18px;
     border:none;
     border-radius:5px;
+    background:#d2b48c;
     cursor:pointer;
 }
 
 button:hover{
-    background:#bbb;
+    background:#c19a6b;
 }
 
 .operator{
-    background:orange;
+    background:#a0522d;
+    color:white;
 }
 
 .equal{
-    background:#4CAF50;
+    background:#556b2f;
+    color:white;
     grid-column:span 2;
 }
 
 .clear{
-    background:red;
+    background:#8b0000;
+    color:white;
 }
 
 </style>
@@ -66,6 +78,8 @@ button:hover{
 <body>
 
 <div class="calculator">
+
+<h1>陳宥廷的計算機</h1>
 
 <input type="text" id="display" readonly>
 
@@ -84,14 +98,14 @@ button:hover{
 <button onclick="append('1')">1</button>
 <button onclick="append('2')">2</button>
 <button onclick="append('3')">3</button>
-<button class="operator" onclick="append('-')">-</button>
+<button class="operator" onclick="append('-')">－</button>
 
 <button onclick="append('0')">0</button>
 <button onclick="append('.')">.</button>
-<button class="operator" onclick="append('+')">+</button>
-<button class="clear" onclick="clearDisplay()">C</button>
+<button class="operator" onclick="append('+')">＋</button>
+<button class="clear" onclick="clearDisplay()">清</button>
 
-<button class="equal" onclick="calculate()">=</button>
+<button class="equal" onclick="calculate()">算</button>
 
 </div>
 </div>
@@ -112,15 +126,11 @@ try{
 document.getElementById("display").value=eval(exp)
 }
 catch{
-document.getElementById("display").value="Error"
+document.getElementById("display").value="錯誤"
 }
 }
 
 </script>
 
-</body>
-</html>
-<!-- partial -->
-  
 </body>
 </html>
